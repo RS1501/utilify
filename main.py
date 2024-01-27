@@ -8,7 +8,7 @@ from tensorflow.keras import layers, models
 from sklearn.preprocessing import OneHotEncoder
 
 # Set your OpenAI API key
-api_key = "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" 
+api_key = "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" 
 client = OpenAI(api_key=api_key)
 
 # Define a function to interact with the chatbot    
@@ -81,7 +81,7 @@ def sample_data():
     })
     return data
 
-def neural_network_rec(monthly_cost, data_allowance, call_minutes, num_texts, network_speed, optimal_service):
+def neural_network_rec(monthly_cost, data_allowance, call_minutes, num_texts, network_speed):
     data = sample_data()
     one_hot_encoded_df = pd.get_dummies(data, columns=['Optimal Plan'])
     one_hot_encoded_extras = ['Optimal Plan_AT&T Unlimited Elite',
@@ -132,8 +132,7 @@ def main():
     print("This is an optimal plan for you as recommended by generative AI: ")
     chatgpt_rec(50, 5, 200, 1000, 150)
     print("")
-    neural_network_rec(70, 5, 100, 1500, 180, "Sprint Unlimited Basic")
-
+    neural_network_rec(70, 5, 100, 1500, 180)
 
 if __name__ == "__main__":
     main()
