@@ -1,0 +1,66 @@
+/* Option1Page.css */
+
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.chatbox {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-message, .bot-message {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.user-message {
+  background-color: #4caf50;
+  color: white;
+  text-align: left;
+}
+
+.bot-message {
+  background-color: #2196f3;
+  color: white;
+  text-align: left;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0b7dda;
+}
+
+/* Additional styling for user and bot labels */
+.user {
+  color: #4caf50;
+}
+
+.bot {
+  color: #2196f3;
+}

@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.header-image {
+  width: 50%; /* Adjust the width as needed */
+  height: auto;
+}
+
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.box-group {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  margin: 10px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(11, 100, 210);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 15px; 
+  overflow: hidden;
+}
+
+.box:hover {
+  background-color: #fffcfc;
+}
+
+.box-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.box-text {
+  position: absolute;
+  font-size: 30px; 
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover .box-text {
+  opacity: 0;
+}
+
+.box-image {
+  max-width: 80%;
+  height: auto;
+  opacity: 0; /* Initially set the image to be transparent */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover .box-image {
+  opacity: 1;
+}
